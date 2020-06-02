@@ -1,0 +1,24 @@
+{
+  "name": "sanscript",
+  "version": "0.1.0",
+  "description": "Transliteration scheme for Indic characters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanskritick/sanscriptjs.git"
+  },
+  "keywords": [
+    "sanskrit",
+    "transliteration"
+  ],
+  "author": "Vikram Bhaskaran <vikram@sanskritick.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanskritick/sanscriptjs/issues"
+  },
+  "homepage": "https://github.com/sanskritick/sanscriptjs#readme"
+}
