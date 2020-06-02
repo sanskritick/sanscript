@@ -1,12 +1,11 @@
-Sanscript.js
-=============================
+# Sanscript.js
 
-Introduction
------------------------------
+## Introduction
+
 Sanscript is a transliteration library for Indian languages. It supports the most popular Indian scripts and several different romanization schemes. Although Sanscript focuses on Sanskrit transliteration, it has partial support for other languages and is easy to extend.
 
-Usage
------------------------------
+## Usage
+
 Sanscript is simple to use:
 
     var output = Sanscript.t(input, from, to);
@@ -40,6 +39,7 @@ and the following Roman schemes:
 * `wx` (WX)
 
 ### Disabling transliteration
+
 When Sanscript sees the token `##`, it toggles the transliteration state:
 
     Sanscript.t('ga##Na##pa##te', 'hk', 'devanagari'); // गNaपte
@@ -51,9 +51,11 @@ When Sanscript sees the token `\`, it disables transliteration on the character 
     Sanscript.t('\\##aham', 'itrans', 'devanagari'); // ##अहम्
 
 ### Transliterating to lossy schemes
+
 A **lossy** scheme does not have the letters needed to support lossless translation. For example, Bengali is a lossy scheme because it uses `ব` for both `ba` and `va`. In future releases, Sanscript might let you choose how to handle lossiness. For the time being, it makes some fairly bad hard-coded assumptions. Corrections and advice are always welcome.
 
 ### Transliteration options
+
 You can tweak the transliteration function by passing an `options` object:
 
     var output = Sanscript.t(input, from, to, options);
@@ -64,6 +66,7 @@ You can tweak the transliteration function by passing an `options` object:
 * `syncope` - If true, use Hindi-style transliteration (`ajay` → `अजय`). In linguistics, this behavior is known as [schwa syncope](http://en.wikipedia.org/wiki/Schwa_deletion_in_Indo-Aryan_languages). Defaults to `false`.
 
 Adding new schemes
+
 -----------------------------
 Adding a new scheme is simple:
 
@@ -71,9 +74,3 @@ Adding a new scheme is simple:
     Sanscript.addRomanScheme(schemeName, schemeData);
 
 For help in creating `schemeData`, see the comments on the `addBrahmicScheme` and `addRomanScheme` functions.
-
-Changelog
----------
-
-* Added Sanskrit Vedic Accent Support
-* Added Tamil Accent Support
